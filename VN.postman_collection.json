@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "74e663a4-02c8-4f32-bb4f-3cd17502ae2f",
+		"name": "VN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "VNSearch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-encoding",
+						"value": " gzip",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "date",
+						"value": " Wed, 16 Jun 2021 19:43:21 GMT",
+						"type": "text"
+					},
+					{
+						"key": "server",
+						"value": " SGW",
+						"type": "text"
+					},
+					{
+						"key": "set-cookie",
+						"value": " SPC_SI=bfftocsg2.zeiIT7aie8dMfr2Tu8Ou5zbFUaRRlUth; Path=/; Domain=.staging.shopee.vn; Max-Age=86400; HttpOnly; Secure",
+						"type": "text"
+					},
+					{
+						"key": "vary",
+						"value": " Accept-Encoding",
+						"type": "text"
+					},
+					{
+						"key": "x-request-id",
+						"value": " 1f8a1b84c4e74d7999d2df8770ae7800:000000b1ca7c4c76:0000000000000000",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://staging.shopee.vn/api/v4/search/search_items?by=relevancy&keyword=test&limit=50&newest=0&order=desc&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2",
+					"protocol": "https",
+					"host": [
+						"staging",
+						"shopee",
+						"vn"
+					],
+					"path": [
+						"api",
+						"v4",
+						"search",
+						"search_items"
+					],
+					"query": [
+						{
+							"key": "by",
+							"value": "relevancy"
+						},
+						{
+							"key": "keyword",
+							"value": "test"
+						},
+						{
+							"key": "limit",
+							"value": "50"
+						},
+						{
+							"key": "newest",
+							"value": "0"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						},
+						{
+							"key": "page_type",
+							"value": "search"
+						},
+						{
+							"key": "scenario",
+							"value": "PAGE_GLOBAL_SEARCH"
+						},
+						{
+							"key": "version",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

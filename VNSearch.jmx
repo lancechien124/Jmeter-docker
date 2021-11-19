@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="VN" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Http URL/API Test" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">1</intProp>
+        </elementProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+        </CookieManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="VNSearch" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="by" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">by</stringProp>
+                <stringProp name="Argument.value">relevancy</stringProp>
+                <stringProp name="Argument.desc">by</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="keyword" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">keyword</stringProp>
+                <stringProp name="Argument.value">test</stringProp>
+                <stringProp name="Argument.desc">keyword</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="limit" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">limit</stringProp>
+                <stringProp name="Argument.value">50</stringProp>
+                <stringProp name="Argument.desc">limit</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="newest" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">newest</stringProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.desc">newest</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="order" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">order</stringProp>
+                <stringProp name="Argument.value">desc</stringProp>
+                <stringProp name="Argument.desc">order</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="page_type" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">page_type</stringProp>
+                <stringProp name="Argument.value">search</stringProp>
+                <stringProp name="Argument.desc">page_type</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="scenario" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">scenario</stringProp>
+                <stringProp name="Argument.value">PAGE_GLOBAL_SEARCH</stringProp>
+                <stringProp name="Argument.desc">scenario</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="version" elementType="HTTPArgument" enabled="true">
+                <stringProp name="Argument.name">version</stringProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <stringProp name="Argument.desc">version</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <stringProp name="HTTPSampler.domain">staging.shopee.vn</stringProp>
+          <stringProp name="HTTPSampler.path">/api/v4/search/search_items</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="VNSearch" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="content-encoding" elementType="Header">
+                <stringProp name="Header.name">content-encoding</stringProp>
+                <stringProp name="Header.value"> gzip</stringProp>
+              </elementProp>
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value"> application/json</stringProp>
+              </elementProp>
+              <elementProp name="date" elementType="Header">
+                <stringProp name="Header.name">date</stringProp>
+                <stringProp name="Header.value"> Wed, 16 Jun 2021 19:43:21 GMT</stringProp>
+              </elementProp>
+              <elementProp name="server" elementType="Header">
+                <stringProp name="Header.name">server</stringProp>
+                <stringProp name="Header.value"> SGW</stringProp>
+              </elementProp>
+              <elementProp name="set-cookie" elementType="Header">
+                <stringProp name="Header.name">set-cookie</stringProp>
+                <stringProp name="Header.value"> SPC_SI=bfftocsg2.zeiIT7aie8dMfr2Tu8Ou5zbFUaRRlUth; Path=/; Domain=.staging.shopee.vn; Max-Age=86400; HttpOnly; Secure</stringProp>
+              </elementProp>
+              <elementProp name="vary" elementType="Header">
+                <stringProp name="Header.name">vary</stringProp>
+                <stringProp name="Header.value"> Accept-Encoding</stringProp>
+              </elementProp>
+              <elementProp name="x-request-id" elementType="Header">
+                <stringProp name="Header.name">x-request-id</stringProp>
+                <stringProp name="Header.value"> 1f8a1b84c4e74d7999d2df8770ae7800:000000b1ca7c4c76:0000000000000000</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
